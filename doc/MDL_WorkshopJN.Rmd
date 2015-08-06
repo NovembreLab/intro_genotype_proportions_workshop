@@ -143,7 +143,7 @@ Let's look more closely and more formally though...
 ### Testing Hardy Weinberg
 
 We can test Hardy-Weinberg at each SNP using Pearson's $\chi^2$-test, and using the $\chi^2$-test statistic:
-$$ X^2=\sum_i \frac{(o_i-e_i)^2}{e_i}$$.  Here we compute the test statistic and obtain its associated p-value, keeping in mind that there is 1 degree of freedom (because we have 3 observation per SNP, and we lose an extra degree of freedom because the expectations depend on the data through the estimated allele frequency).
+$$ X^2=\sum_i \frac{(o_i-e_i)^2}{e_i}$$.  Here we compute the test statistic and obtain its associated p-value, keeping in mind that there is 1 degree of freedom (because we have 3 observations per SNP, and we lose an extra degree of freedom because the expectations depend on the data through the estimated allele frequency).
 
 ```{r}
 g<-mutate(g,chisq = (p11-p1^2)^2/p1^2+(p12-2*p1*p2)^2/(2*p1*p2)+(p22-p2^2)^2/p2^2)
@@ -194,7 +194,7 @@ Now, let's ask if we can find any loci that are wild departures from HW proporti
 
 To find these loci, we'll compute the same relative deficiency you computed above.  That is:
 $$ \frac{2 p_1 (1-p_1)-p_{12}}{2p_1(1-p_1)}$$
-This number (1) is referred to as the $F$ by Sewall Wright, (2) has connections directly to correlation coefficients (advanced exercise: Try to work this out!), and (3) if we assume there is no inbreeding within populations, is also referred to as $F_{ST}$ (which you may have seen).
+This number (1) is referred to as the $F$ by Sewall Wright, (2) has connections directly to correlation coefficients (advanced exercise: Try to work this out!), and (3) if we assume there is no inbreeding within populations, this is related to $F_{ST}$ (which you may have seen).
 
 Let's add this value to our dataframe and plot a histogram:
 
@@ -228,7 +228,7 @@ The region you've found is one of the most differentiated betwen human populatio
 
 ### Wrap-up
 
-Modern population genetics has a lot of additional tools on its workbench, but here using relatively simple and classical ideas combined with genomic-scale data, we have been able to observe some major features of human genetic diversity.  We have seen how at a global scale human populations show about a 10% departure on average from the expectations of Hardy-Weinberg and that at particular regions, like EDAR, there are stronger departures.  We have also revisited some basic concepts of probablity and statistics such as indepedence vs correlation, the $\chi^2$ test, and the problems of multiple testing.  Finally, we have gained more familiarity with R. In the end, we didn't do much about the possible genotyping errors (those regions where there are isolated SNPs that depart from Hardy-Weinberg), but if we were doing additional analyses, we could filter them from out of the data. 
+Modern population genetics has a lot of additional tools on its workbench, but here using relatively simple and classical ideas combined with genomic-scale data, we have been able to observe and interpret some major features of human genetic diversity.  We have seen how at a global scale human populations show about a 10% departure on average from the expectations of Hardy-Weinberg and that at particular regions, like EDAR, there are stronger departures.  We have also revisited some basic concepts of probablity and statistics such as indepedence vs correlation, the $\chi^2$ test, and the problems of multiple testing.  Finally, we have gained more familiarity with R. In the end, we didn't do much about the possible genotyping errors (those regions where there are isolated SNPs that depart from Hardy-Weinberg), but if we were doing additional analyses, we could filter them from out of the data. 
 
 
 ### Follow-up activities

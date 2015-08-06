@@ -1,6 +1,0 @@
----
-title: "MDL_WorkshopJN_notes.Rmd"
-output: html_document
----
-
-

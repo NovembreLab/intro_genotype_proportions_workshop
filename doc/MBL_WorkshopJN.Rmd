@@ -1,3 +1,6 @@
+---
+output: pdf_document
+---
 
 # Population genetics workshop
 
@@ -37,7 +40,8 @@ We have done additional pre-processing of the data such that you have files that
 
 ### Note about logistics
 
-[Insert comments location of files and directory structure]
+If you need the files they can be found at:
+[[https://github.com/StefanoAllesina/BSD-QBio2/tree/master/workshops/novembre]]
 
 ### Initial view of the data
 
@@ -84,7 +88,7 @@ And let's visualize the distribution using `qplot` to produce a quick histogram:
 qplot(nObs,data=g)
 ```
 
-Our data are from 938 individuals. When the counts are less than this total, it's because some individuals hadarray data that was difficult to call a genotype for.  
+Our data are from 938 individuals. When the counts are less than this total, it's because some individuals had array data that was difficult to call a genotype for.  
 
 *Question:*  Do most of the SNPs have complete data?  
 *Question:* What is the lowest count observed?   Is this number in rough agreement with what we know about how the genome-wide missingness rate filter was set to >98.5% of all SNPs 

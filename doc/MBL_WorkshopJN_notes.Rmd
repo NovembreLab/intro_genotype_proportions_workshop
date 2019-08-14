@@ -12,16 +12,12 @@ do
 plink --bfile H938 --hardy --chr $i --out H938_chr$i
 awk '(NR==1)||($3=="ALL"){print $1,$2,$4,$5,$6}' H938_chr$i.hwe | sed -e 's/\// /g' -e 's/GENO/nA1A1 nA1A2 nA2A2/g' > H938_chr$i.geno
 done
-<<<<<<< HEAD:doc/MDL_WorkshopJN_notes.Rmd
+
 
 for i in 5 6 12 15
 do
 plink --bfile H938_Euro --hardy --chr $i --out H938_Euro_chr$i
 awk '(NR==1)||($3=="ALL"){print $1,$2,$4,$5,$6}' H938_Euro_chr$i.hwe | sed -e 's/\// /g' -e 's/GENO/nA1A1 nA1A2 nA2A2/g' > H938_Euro_chr$i.geno
 done
-
 ```
 
-=======
-```
->>>>>>> 2af7999a9d1e204b438fa1b99a25cf3dac3179fd:doc/MBL_WorkshopJN_notes.Rmd
